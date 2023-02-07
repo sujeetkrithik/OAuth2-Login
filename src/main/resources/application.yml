@@ -1,0 +1,29 @@
+#logging:
+#  level:
+#    org:
+#      springframework: 'DEBUG '
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    password: scott
+    url: jdbc:mysql://localhost/oauth2
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId:
+            clientSecret:
+          facebook:
+            clientid:
+            clientSecret:
+            scope:
+              - email
+              - profile
+
